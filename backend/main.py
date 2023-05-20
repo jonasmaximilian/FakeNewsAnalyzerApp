@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+import joblib
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+model = joblib.load('model/pa_model.pkl')
+
