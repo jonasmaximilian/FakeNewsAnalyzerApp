@@ -12,21 +12,22 @@ model, vectorizer = None, None
 
 @app.route("/")
 def home():
-    return """<!DOCTYPE html>
-<html>
-<head>
-    <title>Text Prediction</title>
-</head>
-<body>
-    <h1>Text Prediction</h1>
-    <form method="POST" action="/predict">
-        <label for="text">Enter text:</label><br>
-        <textarea name="text" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
-    """
+    return '<h1>Text Prediction</h1>'
+#     return """<!DOCTYPE html>
+# <html>
+# <head>
+#     <title>Text Prediction</title>
+# </head>
+# <body>
+#     <h1>Text Prediction</h1>
+#     <form method="POST" action="/predict">
+#         <label for="text">Enter text:</label><br>
+#         <textarea name="text" rows="4" cols="50"></textarea><br><br>
+#         <input type="submit" value="Submit">
+#     </form>
+# </body>
+# </html>
+#     """
 
 @app.route("/predict", methods=["POST"])
 def predict():
